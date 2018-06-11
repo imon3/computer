@@ -1,0 +1,542 @@
+/*-----------UNIVERSAL---------------------*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+/*-----------------MAIN GRID-------------------*/
+body .grid{
+	display: grid;
+	min-width: 960px;
+	width: 100%;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas: 
+		"header header header header header header header header header header header header"
+		"mHeader mHeader mHeader mHeader mHeader mHeader mHeader mHeader mHeader mHeader mHeader mHeader"
+		"Body Body Body Body Body Body Body Body Body Body Body Body"
+		"footer footer footer footer footer footer footer footer footer footer footer footer"
+		;
+	
+}
+/*----------------HEADER--------------*/
+.grid header{
+	grid-area: header;
+}
+
+header .top-header{
+	color: black;
+	background-color: #42aa2a;
+	grid-area: theader;
+	padding: 10px 20%; 
+}
+
+header .main-header{
+	background-color: #F2F8FA; 
+	padding: 20px 0;
+	grid-area: mHeader;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		"headerP headerUl"
+}
+
+header .main-header p{
+	grid-area: headerP;
+	font-size: 50px;
+	color: #42aa2a;
+	text-align: right;
+}
+
+header .main-header ul{
+	grid-area: headerUl;
+	text-decoration-style: none;
+	text-align: left;
+	align-self: center;
+	display: block;	
+	padding-left: 40px
+}
+
+header .main-header ul li{
+	list-style-type: none;
+	align-self: center;
+	display: inline-block;
+	margin: 10px;
+}
+
+header .main-header ul li a{
+	color: #959696;
+	font-size: 30px;
+}
+
+/*-------BODY------------*/
+.grid .body{
+	grid-area: Body;
+}
+
+#pickUp{
+	color: #959696;
+}
+
+/*----TOP BODY----------*/
+.grid .body .top-body{
+	color: #fff;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas: 
+		"tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop"
+		"tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop"
+		"tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop"
+		"tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop tTop"
+		"bTop bTop bTop bTop bTop bTop bTop bTop bTop bTop bTop bTop"
+		"bTop bTop bTop bTop bTop bTop bTop bTop bTop bTop bTop bTop"
+		;
+
+
+}
+
+.body .top-body .top-top{
+	grid-area: tTop;
+	background-image: url("../img/recycle-your-devices.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.body .top-body .btm-top{
+	grid-area: bTop;
+	color: black;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 10px;
+	background-color: #1DB83C;
+}
+
+.body .top-body .btm-top button{
+	padding: 20px 10px;
+	border: 2px #fff solid;
+	font-size: 20px;
+	margin-top: 10px;
+	color: #fff;
+	background-color: #1DB83C;
+}
+
+body .top-body .btm-top button a{
+	color: #fff;
+	padding: 20px;
+}
+
+/*-----MAIN BODY------*/
+.grid .body .main-body{
+	background-color: #f2f2f2;
+}
+
+.grid .body .main-body .top-main{
+	font-size: 25px;
+	text-align: center;
+	margin: 0 20%;
+	padding: 5% 0;
+}
+
+.grid .body .main-body .top-main .top-main1{
+	padding-bottom: 2%;	
+}
+
+.grid .body .main-body .services{
+	margin: 0 20%;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas:
+		"cube1 cube2 cube3"
+		"cube4 cube5 cube6"
+		"cube7 cube8 cube9"
+	;
+}
+
+/*----SERVICE CUBES---------*/
+.grid .body .main-body .services .services-cube1{
+	grid-area: cube1;
+	align-self: center;
+}
+
+.grid .body .main-body .services .services-cube2{
+	grid-area: cube2;
+	font-size: 50px;
+	font-weight: bold;
+	align-self: center;
+}
+
+.grid .body .main-body .services .services-cube3{
+	grid-area: cube3;
+	align-self: center;
+}
+
+.grid .body .main-body .services .services-cube4{
+	grid-area: cube4;
+	padding: 40px 20px;
+}
+
+.grid .body .main-body .services .services-cube5{
+	grid-area: cube5;
+	padding: 40px 20px;
+}
+
+.grid .body .main-body .services .services-cube6{
+	grid-area: cube6;
+	padding: 40px 20px;
+}
+
+.grid .body .main-body .services .services-cube7{
+	grid-area: cube7;
+	padding: 40px 20px;
+}
+
+.grid .body .main-body .services .services-cube8{
+	grid-area: cube8;
+	padding: 40px 20px;
+}
+
+.grid .body .main-body .services .services-cube9{
+	grid-area: cube9;
+	padding: 40px 20px;
+}
+
+.grid .body .main-body .services div p .title{
+	color: #42aa2a;
+	font-size: 30px;
+}
+
+/*---SERVICE ICONS-------*/
+.grid .body .main-body .services div .fa{
+	font-size: 50px;
+	border: 3px solid #42aa2a;
+	padding: 40px;
+	border-radius: 50%;
+	color: #42aa2a;
+}
+
+/*---SERVICE PARAGRAPH-----*/
+.grid .body .main-body .services div div .line{
+	line-height: 1.5rem;
+}
+
+/*---NUMBERS SECTION-------*/
+.grid .body .main-body .numbers{
+	padding: 10% 20%;
+	background-color: #2f3135;
+	display: grid;
+	text-align: center;
+	justify-content: center;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"number1 number2 number3 number4"
+	;
+}
+
+.grid .body .main-body .numbers .number1{
+	grid-area: number1;
+	list-style-type: none;
+}
+.grid .body .main-body .numbers .number2{
+	grid-area: number2;
+	list-style-type: none;
+}
+.grid .body .main-body .numbers .number3{
+	grid-area: number3;
+	list-style-type: none;
+}
+.grid .body .main-body .numbers .number4{
+	grid-area: number4;
+	list-style-type: none;
+}
+
+.grid .body .main-body .numbers ul .num{
+	font-size: 80px;
+}
+
+.grid .body .main-body .numbers ul .num.num1{
+	color: #a443d8;	
+}
+
+.grid .body .main-body .numbers ul .num.num2{
+	color: #5acee2;
+}
+
+.grid .body .main-body .numbers ul .num.num3{
+	color: #d8a752;
+}
+
+.grid .body .main-body .numbers ul .num.num4{
+	color: #dd5454;
+}
+
+.grid .body .main-body .numbers ul .description{
+	font-size: 20px;
+	color: #fff;
+}
+
+/*------RECYCLING SECTION---------*/
+.grid .body .main-body .recycling{
+	padding: 0 20%;
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas:
+		"rec rec"
+		"pic recList"
+	;
+}
+
+.grid .body .main-body .recycling .rec{
+	grid-area: rec;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: minmax(100px auto);
+	grid-template-areas: 
+		"first recy second"
+	;	
+}
+
+.grid .body .main-body .recycling .rec .first{
+	grid-area: first;
+	align-self: center;
+}
+
+.grid .body .main-body .recycling .rec .recy{
+	grid-area: recy;
+	font-size: 50px;
+	font-weight: 700;
+	align-self: center;
+	text-align: center;
+}
+
+.grid .body .main-body .recycling .rec .second{
+	grid-area: second;
+	align-self: center;
+}
+
+.grid .body .main-body .recycling .pic{
+	grid-area: pic;
+	background-image:  url("../img/recy-comps.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.grid .body .main-body .recycling .recList{
+	grid-area: recList;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.grid .body .main-body .recycling .recList p{
+	line-height: 2.5rem;
+}
+
+.grid .body .main-body .recycling .recList ol{
+	list-style-position: inside;
+}
+
+/*-------TESTIMONIALS SECTION---------*/
+.grid .body .main-body .testimonials{
+	padding: 20px 20% 80px 20%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(100px auto);
+	grid-template-areas: 
+		"topTest topTest"
+		"test1 test2"
+		"bodyTest bodyTest"
+	;
+}
+
+.grid .body .main-body .testimonials .top-test{
+	grid-area: topTest;
+	padding: 20px 0;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-auto-rows: minmax(100px auto);
+	grid-template-areas: 
+		"ttest1 ttest2 ttest3"
+	;
+}
+
+.grid .body .main-body .testimonials .top-test .top-test1{
+	grid-area: ttest1;
+	text-align: center;
+	align-self: center;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.grid .body .main-body .testimonials .top-test .top-test2{
+	grid-area: ttest2;
+	text-align: center;
+	align-self: center;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.grid .body .main-body .testimonials .top-test .top-test3{
+	grid-area: ttest3;
+	align-self: center;
+}
+
+.grid .body .main-body .testimonials #bodyTest{
+	grid-area: bodyTest;
+	display: grid;
+	grid-template-columns: repeat(1fr);
+	grid-auto-rows: minmax(100px auto);
+	grid-template-areas:
+		"test1 test2"
+	;
+}
+
+.grid .body .main-body .testimonials .test1{
+	grid-area: test1;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-auto-rows: repeat(4 1fr);
+	background-color: #606266; 
+	padding: 40px 0;
+	margin: 0 5px;
+	grid-template-areas:
+		"first first"
+		"tPerson1 pFirst"
+	;
+}
+
+.grid .body .main-body .testimonials .test1 .first{
+	font-size: 50px;
+	text-align: center;
+	grid-area: first;
+}
+
+
+.grid .body .main-body .testimonials .test1 i{
+	font-size: 100px;
+	text-align: center;
+}
+
+.grid .body .main-body .testimonials .test1 #tPerson1{
+	align-self: center;
+	padding: 10px;
+	max-width: 200px;
+	height: 200px;
+	grid-area: tPerson1;
+}
+
+.grid .body .main-body .testimonials .test1 #tPerson1 .pFirst{
+	grid-area: pFirst;
+}
+
+.grid .body .main-body .testimonials .test2{
+	grid-area: test2;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-auto-rows: repeat(4 1fr);
+	background-color: #606266; 
+	margin: 0 5px;
+	padding: 40px 0;
+	grid-template-areas:
+		"first first"
+		"tPerson2 pSecond"
+	;
+}
+
+.grid .body .main-body .testimonials .test2 .first{
+	font-size: 50px;
+	text-align: center;
+	grid-area: first;
+}
+
+.grid .body .main-body .testimonials .test2 i{
+	font-size: 100px;
+	text-align: center;
+}
+
+.grid .body .main-body .testimonials .test2 #tPerson2{
+	padding: 10px;
+	align-self: center;
+	max-width: 200px;
+	max-height: 200px;
+	grid-area: tPerson2;
+}
+
+.grid .body .main-body .testimonials .test1 #tPerson2 .pSecond{
+	grid-area: pSecond;
+}
+/*------FOOTER SECTION----------*/
+.grid footer{
+	grid-area: footer;
+	display: grid;
+	color: #fff;
+	background-color: #606266;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: minmax(100px auto);
+	grid-template-areas: 
+		"address links statement request"
+	;
+	padding: 50px 20%;
+}
+
+.grid footer .address{
+	padding: 20px;
+	grid-area: address;
+	font-size: 20px;
+}
+
+.grid footer .links{
+	padding: 20px;
+	grid-area: links;
+	font-size: 20px;
+}
+
+.grid footer .links li{
+	list-style-type: none;
+}
+
+.grid footer .links a{
+	color: #fff;
+}
+
+.grid footer .statement{
+	padding: 20px;
+	grid-area: statement;
+	font-size: 20px;
+}
+
+.grid footer .request{
+	padding: 20px;
+	grid-area: request;
+	font-size: 20px;
+}
+
+.grid footer .colorGreen{
+	color: #1DB83C;
+	font-size: 25px;
+}
+
+.grid footer button{
+	padding: 15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;  
+}
+
+
+
+
+
